@@ -1,0 +1,885 @@
+2026-01-21 22:42:47,732 - INFO - User asked (topic=New_Chat_21_Jan): Is it true that in comparison of loosing we gain weight fast?
+2026-01-21 22:43:12,984 - INFO - AI response (topic=New_Chat_21_Jan): I'm happy to help you with your concern about losing weight and gaining weight.
+
+**Understanding the...
+2026-02-26 15:35:25,479 - INFO - BMI calculated: weight=78.0, height=167.64, bmi=27.75
+2026-02-26 15:37:30,411 - INFO - User asked (topic=test_chat): I have sciatica pain , can it cure by acupuncture therapy?
+2026-02-26 15:37:49,033 - INFO - AI response (topic=test_chat): **Understanding Sciatica Pain**
+
+Sciatica pain is a common condition characterized by discomfort or ...
+2026-02-26 15:42:23,367 - INFO - User asked (topic=test_chat): ok
+2026-02-26 15:42:29,207 - INFO - AI response (topic=test_chat): I'm happy to help! Since we've already discussed your question about sciatica pain and acupuncture t...
+2026-03-01 16:37:53,898 - INFO - BMI calculated: weight=1.0, height=1.0, bmi=10000.00
+2026-03-01 16:38:08,236 - INFO - BMI calculated: weight=78.0, height=167.0, bmi=27.97
+2026-03-01 16:39:06,878 - INFO - User asked (topic=test_chat): hi
+2026-03-01 16:39:06,885 - ERROR - Error generating response: 'Ollama' object has no attribute 'bind_tools'
+2026-03-02 13:48:43,172 - INFO - User asked (topic=New_Chat_21_Jan): Hi
+2026-03-02 13:48:43,174 - ERROR - Error generating response: 
+2026-03-02 13:50:14,905 - INFO - User asked (topic=my_workout): Hi
+2026-03-02 13:50:14,915 - ERROR - Error generating response: 
+2026-03-02 13:56:31,878 - INFO - User asked (topic=my_workout): How many calories are in banana?
+2026-03-02 13:56:32,960 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 400 Bad Request"
+2026-03-02 13:56:32,970 - ERROR - Error generating response: registry.ollama.ai/library/llama3:8b does not support tools (status code: 400)
+2026-03-02 14:16:28,769 - INFO - User asked (topic=my_workout): How many calories are in banana?
+2026-03-02 14:16:29,312 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 400 Bad Request"
+2026-03-02 14:16:29,597 - ERROR - Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\updated_main.py", line 87, in <module>
+    result = st.session_state.conversation.invoke(
+        {"messages": [{"role": "user", "content": user_text.strip()}]}
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain\agents\factory.py", line 1131, in model_node
+    response = _execute_model_sync(request)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain\agents\factory.py", line 1102, in _execute_model_sync
+    output = model_.invoke(messages)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5557, in invoke
+    return self.bound.invoke(
+           ~~~~~~~~~~~~~~~~~^
+        input,
+        ^^^^^^
+        self._merge_configs(config),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **{**self.kwargs, **kwargs},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 398, in invoke
+    self.generate_prompt(
+    ~~~~~~~~~~~~~~~~~~~~^
+        [self._convert_input(input)],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ).generations[0][0],
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1117, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 927, in generate
+    self._generate_with_cache(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        m,
+        ^^
+    ...<2 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1221, in _generate_with_cache
+    result = self._generate(
+        messages, stop=stop, run_manager=run_manager, **kwargs
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_ollama\chat_models.py", line 1030, in _generate
+    final_chunk = self._chat_stream_with_aggregation(
+        messages, stop, run_manager, verbose=self.verbose, **kwargs
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_ollama\chat_models.py", line 965, in _chat_stream_with_aggregation
+    for chunk in self._iterate_over_stream(messages, stop, **kwargs):
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_ollama\chat_models.py", line 1054, in _iterate_over_stream
+    for stream_resp in self._create_chat_stream(messages, stop, **kwargs):
+                       ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_ollama\chat_models.py", line 952, in _create_chat_stream
+    yield from self._client.chat(**chat_params)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\ollama\_client.py", line 179, in inner
+    raise ResponseError(e.response.text, e.response.status_code) from None
+ollama._types.ResponseError: registry.ollama.ai/library/llama3:8b does not support tools (status code: 400)
+During task with name 'model' and id '714b5379-a7be-c3db-2f2e-076686847f8c'
+
+2026-03-02 20:53:30,746 - INFO - User asked (topic=New_Chat_21_Jan): How many calories are in banana?
+2026-03-02 20:53:40,228 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-02 20:53:44,561 - ERROR - Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+    ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<6 lines>...
+        enforce_content_length=enforce_content_length,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connection.py", line 500, in request
+    self.endheaders()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\Python313\Lib\http\client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\http\client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "C:\Program Files\Python313\Lib\http\client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=8000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /tools/get_nutrition (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\updated_main.py", line 87, in <module>
+    result = st.session_state.conversation.invoke(
+        {"messages": [{"role": "user", "content": user_text.strip()}]}
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 799, in _func
+    outputs = list(
+        executor.map(self._run_one, tool_calls, input_types, tool_runtimes)
+    )
+  File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Program Files\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 551, in _wrapped_fn
+    return contexts.pop().run(fn, *args)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 1010, in _run_one
+    return self._execute_tool_sync(tool_request, input_type, config)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 959, in _execute_tool_sync
+    content = _handle_tool_error(e, flag=self._handle_tool_errors)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 424, in _handle_tool_error
+    content = flag(e)  # type: ignore [assignment, call-arg]
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 381, in _default_handle_tool_errors
+    raise e
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 916, in _execute_tool_sync
+    response = tool.invoke(call_args, config)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\tools\base.py", line 624, in invoke
+    return self.run(tool_input, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\tools\base.py", line 951, in run
+    raise error_to_raise
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\tools\base.py", line 917, in run
+    response = context.run(self._run, *tool_args, **tool_kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\tools\structured.py", line 93, in _run
+    return self.func(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\new_backend.py", line 23, in get_nutrition
+    response = requests.post(
+        "http://localhost:8000/tools/get_nutrition",
+        json={"food": food}
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\requests\adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /tools/get_nutrition (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+During task with name 'tools' and id '75fc3cfe-bffa-0a96-538b-41f16f15aaef'
+
+2026-03-02 20:56:32,712 - INFO - User asked (topic=New_Chat_21_Jan): How many calories are in banana?
+2026-03-02 20:56:34,863 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-02 20:56:39,030 - ERROR - Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+    ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<6 lines>...
+        enforce_content_length=enforce_content_length,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connection.py", line 500, in request
+    self.endheaders()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\Python313\Lib\http\client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\http\client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "C:\Program Files\Python313\Lib\http\client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connection.py", line 331, in connect
+    self.sock = self._new_conn()
+                ~~~~~~~~~~~~~~^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='localhost', port=8000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\requests\adapters.py", line 644, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /tools/get_nutrition (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\updated_main.py", line 87, in <module>
+    result = st.session_state.conversation.invoke(
+        {"messages": [{"role": "user", "content": user_text.strip()}]}
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 799, in _func
+    outputs = list(
+        executor.map(self._run_one, tool_calls, input_types, tool_runtimes)
+    )
+  File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Program Files\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 551, in _wrapped_fn
+    return contexts.pop().run(fn, *args)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 1010, in _run_one
+    return self._execute_tool_sync(tool_request, input_type, config)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 959, in _execute_tool_sync
+    content = _handle_tool_error(e, flag=self._handle_tool_errors)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 424, in _handle_tool_error
+    content = flag(e)  # type: ignore [assignment, call-arg]
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 381, in _default_handle_tool_errors
+    raise e
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 916, in _execute_tool_sync
+    response = tool.invoke(call_args, config)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\tools\base.py", line 624, in invoke
+    return self.run(tool_input, **kwargs)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\tools\base.py", line 951, in run
+    raise error_to_raise
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\tools\base.py", line 917, in run
+    response = context.run(self._run, *tool_args, **tool_kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\tools\structured.py", line 93, in _run
+    return self.func(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\new_backend.py", line 23, in get_nutrition
+    response = requests.post(
+        "http://localhost:8000/tools/get_nutrition",
+        json={"food": food}
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\requests\adapters.py", line 677, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /tools/get_nutrition (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+During task with name 'tools' and id 'd6c99d32-e28b-9900-3549-c5068e8316fa'
+
+2026-03-03 15:48:35,218 - INFO - User asked (topic=New_Chat_21_Jan): How many calories are in banana?
+2026-03-03 15:48:54,113 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 15:48:57,672 - ERROR -   + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\updated_main.py", line 87, in <module>
+  |     result = st.session_state.conversation.invoke(
+  |         {"messages": [{"role": "user", "content": user_text.strip()}]}
+  |     )
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+  |     for chunk in self.stream(
+  |                  ~~~~~~~~~~~^
+  |         input,
+  |         ^^^^^^
+  |     ...<10 lines>...
+  |         **kwargs,
+  |         ^^^^^^^^^
+  |     ):
+  |     ^
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+  |     for _ in runner.tick(
+  |              ~~~~~~~~~~~^
+  |         [t for t in loop.tasks.values() if not t.writes],
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |     ...<2 lines>...
+  |         schedule_task=loop.accept_push,
+  |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |     ):
+  |     ^
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+  |     run_with_retry(
+  |     ~~~~~~~~~~~~~~^
+  |         t,
+  |         ^^
+  |     ...<10 lines>...
+  |         },
+  |         ^^
+  |     )
+  |     ^
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+  |     return task.proc.invoke(task.input, config)
+  |            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+  |     input = context.run(step.invoke, input, config, **kwargs)
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+  |     ret = self.func(*args, **kwargs)
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 799, in _func
+  |     outputs = list(
+  |         executor.map(self._run_one, tool_calls, input_types, tool_runtimes)
+  |     )
+  |   File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 619, in result_iterator
+  |     yield _result_or_cancel(fs.pop())
+  |           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  |   File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 317, in _result_or_cancel
+  |     return fut.result(timeout)
+  |            ~~~~~~~~~~^^^^^^^^^
+  |   File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 456, in result
+  |     return self.__get_result()
+  |            ~~~~~~~~~~~~~~~~~^^
+  |   File "C:\Program Files\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+  |     raise self._exception
+  |   File "C:\Program Files\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+  |     result = self.fn(*self.args, **self.kwargs)
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\runnables\config.py", line 551, in _wrapped_fn
+  |     return contexts.pop().run(fn, *args)
+  |            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 1010, in _run_one
+  |     return self._execute_tool_sync(tool_request, input_type, config)
+  |            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 959, in _execute_tool_sync
+  |     content = _handle_tool_error(e, flag=self._handle_tool_errors)
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 424, in _handle_tool_error
+  |     content = flag(e)  # type: ignore [assignment, call-arg]
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 381, in _default_handle_tool_errors
+  |     raise e
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\tool_node.py", line 916, in _execute_tool_sync
+  |     response = tool.invoke(call_args, config)
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\tools\base.py", line 624, in invoke
+  |     return self.run(tool_input, **kwargs)
+  |            ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\tools\base.py", line 951, in run
+  |     raise error_to_raise
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\tools\base.py", line 917, in run
+  |     response = context.run(self._run, *tool_args, **tool_kwargs)
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langchain_core\tools\structured.py", line 93, in _run
+  |     return self.func(*args, **kwargs)
+  |            ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\new_backend.py", line 29, in get_nutrition
+  |     return call_mcp_tool_sync("get_nutrition", {"food": food})
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\mcp_adapter.py", line 20, in call_mcp_tool_sync
+  |     return asyncio.run(adapter.call_tool(tool_name, arguments))
+  |            ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Program Files\Python313\Lib\asyncio\runners.py", line 195, in run
+  |     return runner.run(main)
+  |            ~~~~~~~~~~^^^^^^
+  |   File "C:\Program Files\Python313\Lib\asyncio\runners.py", line 118, in run
+  |     return self._loop.run_until_complete(task)
+  |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  |   File "C:\Program Files\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+  |     return future.result()
+  |            ~~~~~~~~~~~~~^^
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\mcp_adapter.py", line 11, in call_tool
+  |     async with sse_client(self.url) as streams:
+  |                ~~~~~~~~~~^^^^^^^^^^
+  |   File "C:\Program Files\Python313\Lib\contextlib.py", line 214, in __aenter__
+  |     return await anext(self.gen)
+  |            ^^^^^^^^^^^^^^^^^^^^^
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\mcp\client\sse.py", line 63, in sse_client
+  |     async with anyio.create_task_group() as tg:
+  |                ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  | During task with name 'tools' and id '2a4cdb95-f77f-2d19-8eb6-6ebbfa0cee12'
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    |     yield
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    |     resp = await self._pool.handle_async_request(req)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    |     raise exc from None
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    |     response = await connection.handle_async_request(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         pool_request.request
+    |         ^^^^^^^^^^^^^^^^^^^^
+    |     )
+    |     ^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    |     raise exc
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    |     stream = await self._connect(request)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpcore\_async\connection.py", line 124, in _connect
+    |     stream = await self._network_backend.connect_tcp(**kwargs)
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    |     return await self._backend.connect_tcp(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ...<5 lines>...
+    |     )
+    |     ^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 113, in connect_tcp
+    |     with map_exceptions(exc_map):
+    |          ~~~~~~~~~~~~~~^^^^^^^^^
+    |   File "C:\Program Files\Python313\Lib\contextlib.py", line 162, in __exit__
+    |     self.gen.throw(value)
+    |     ~~~~~~~~~~~~~~^^^^^^^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    |     raise to_exc(exc) from exc
+    | httpcore.ConnectError: All connection attempts failed
+    | 
+    | The above exception was the direct cause of the following exception:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\mcp\client\sse.py", line 69, in sse_client
+    |     async with aconnect_sse(
+    |                ~~~~~~~~~~~~^
+    |         client,
+    |         ^^^^^^^
+    |         "GET",
+    |         ^^^^^^
+    |         url,
+    |         ^^^^
+    |     ) as event_source:
+    |     ^
+    |   File "C:\Program Files\Python313\Lib\contextlib.py", line 214, in __aenter__
+    |     return await anext(self.gen)
+    |            ^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpx_sse\_api.py", line 74, in aconnect_sse
+    |     async with client.stream(method, url, headers=headers, **kwargs) as response:
+    |                ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Program Files\Python313\Lib\contextlib.py", line 214, in __aenter__
+    |     return await anext(self.gen)
+    |            ^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpx\_client.py", line 1583, in stream
+    |     response = await self.send(
+    |                ^^^^^^^^^^^^^^^^
+    |     ...<4 lines>...
+    |     )
+    |     ^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpx\_client.py", line 1629, in send
+    |     response = await self._send_handling_auth(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ...<4 lines>...
+    |     )
+    |     ^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    |     response = await self._send_handling_redirects(
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ...<3 lines>...
+    |     )
+    |     ^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    |     response = await self._send_single_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    |     response = await transport.handle_async_request(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    |     with map_httpcore_exceptions():
+    |          ~~~~~~~~~~~~~~~~~~~~~~~^^
+    |   File "C:\Program Files\Python313\Lib\contextlib.py", line 162, in __exit__
+    |     self.gen.throw(value)
+    |     ~~~~~~~~~~~~~~^^^^^^^
+    |   File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    |     raise mapped_exc(message) from exc
+    | httpx.ConnectError: All connection attempts failed
+    +------------------------------------
+
+2026-03-03 16:00:12,651 - INFO - User asked (topic=New_Chat_21_Jan): calories in egg ?
+2026-03-03 16:00:12,697 - ERROR - Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\updated_main.py", line 87, in <module>
+    result = st.session_state.conversation.invoke(
+        {"messages": [{"role": "user", "content": user_text.strip()}]}
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 393, in invoke
+    ret = context.run(self.func, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 661, in call_model
+    model_input = _get_model_input_state(state)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 640, in _get_model_input_state
+    _validate_chat_history(messages)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 266, in _validate_chat_history
+    raise ValueError(error_message)
+ValueError: Found AIMessages with tool_calls that do not have a corresponding ToolMessage. Here are the first few of those tool calls: [{'name': 'get_nutrition', 'args': {'food': 'banana'}, 'id': '40cc2ad7-4009-482c-bc17-8ea43d0b16f2', 'type': 'tool_call'}].
+
+Every tool call (LLM requesting to call a tool) in the message history MUST have a corresponding ToolMessage (result of a tool invocation to return to the LLM) - this is required by most LLM providers.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/INVALID_CHAT_HISTORY
+During task with name 'agent' and id '6d5c2059-a807-444f-641f-8b8dfa5b2bc8'
+
+2026-03-03 16:01:11,974 - INFO - User asked (topic=New_Chat_21_Jan): calories in egg ?
+2026-03-03 16:01:11,988 - ERROR - Traceback (most recent call last):
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\updated_main.py", line 87, in <module>
+    result = st.session_state.conversation.invoke(
+        {"messages": [{"role": "user", "content": user_text.strip()}]}
+    )
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3068, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2643, in stream
+    for _ in runner.tick(
+             ~~~~~~~~~~~^
+        [t for t in loop.tasks.values() if not t.writes],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        schedule_task=loop.accept_push,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+    ~~~~~~~~~~~~~~^
+        t,
+        ^^
+    ...<10 lines>...
+        },
+        ^^
+    )
+    ^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 393, in invoke
+    ret = context.run(self.func, *args, **kwargs)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 661, in call_model
+    model_input = _get_model_input_state(state)
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 640, in _get_model_input_state
+    _validate_chat_history(messages)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\HP\PycharmProjects\ollama_fitness_bot\.venv\Lib\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 266, in _validate_chat_history
+    raise ValueError(error_message)
+ValueError: Found AIMessages with tool_calls that do not have a corresponding ToolMessage. Here are the first few of those tool calls: [{'name': 'get_nutrition', 'args': {'food': 'banana'}, 'id': '40cc2ad7-4009-482c-bc17-8ea43d0b16f2', 'type': 'tool_call'}].
+
+Every tool call (LLM requesting to call a tool) in the message history MUST have a corresponding ToolMessage (result of a tool invocation to return to the LLM) - this is required by most LLM providers.
+For troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/INVALID_CHAT_HISTORY
+During task with name 'agent' and id '5d333e5d-0402-5aff-a6ee-8a8fd5f90586'
+
+2026-03-03 16:01:51,310 - INFO - User asked (topic=03_march): calories in egg ?
+2026-03-03 16:02:01,030 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 16:02:02,352 - INFO - HTTP Request: GET http://localhost:8000/sse "HTTP/1.1 200 OK"
+2026-03-03 16:02:02,676 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=4281fab10fd5473cb0d45bbccca4e8aa "HTTP/1.1 202 Accepted"
+2026-03-03 16:02:02,698 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=4281fab10fd5473cb0d45bbccca4e8aa "HTTP/1.1 202 Accepted"
+2026-03-03 16:02:02,707 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=4281fab10fd5473cb0d45bbccca4e8aa "HTTP/1.1 202 Accepted"
+2026-03-03 16:02:14,500 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=4281fab10fd5473cb0d45bbccca4e8aa "HTTP/1.1 202 Accepted"
+2026-03-03 16:02:15,631 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 16:02:16,570 - INFO - AI response: Unfortunately, the API request failed. However, based on general knowledge, a large egg typically co...
+2026-03-03 21:25:01,968 - INFO - User asked (topic=03_march): calories in egg ?
+2026-03-03 21:25:13,623 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 21:25:14,862 - INFO - HTTP Request: GET http://localhost:8000/sse "HTTP/1.1 200 OK"
+2026-03-03 21:25:15,218 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=74ff469ae6904bdeb25e0bcc7f978467 "HTTP/1.1 202 Accepted"
+2026-03-03 21:25:15,241 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=74ff469ae6904bdeb25e0bcc7f978467 "HTTP/1.1 202 Accepted"
+2026-03-03 21:25:15,269 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=74ff469ae6904bdeb25e0bcc7f978467 "HTTP/1.1 202 Accepted"
+2026-03-03 21:25:27,416 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=74ff469ae6904bdeb25e0bcc7f978467 "HTTP/1.1 202 Accepted"
+2026-03-03 21:25:28,511 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 21:25:29,446 - INFO - AI response: Unfortunately, the API request failed. However, based on general knowledge, a large egg typically co...
+2026-03-03 21:26:16,076 - INFO - User asked (topic=03_march): calories in egg ?
+2026-03-03 21:26:18,069 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 21:26:19,304 - INFO - HTTP Request: GET http://localhost:8000/sse "HTTP/1.1 200 OK"
+2026-03-03 21:26:19,580 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=36343b2492c84066a2d9eebc371b9381 "HTTP/1.1 202 Accepted"
+2026-03-03 21:26:19,594 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=36343b2492c84066a2d9eebc371b9381 "HTTP/1.1 202 Accepted"
+2026-03-03 21:26:19,607 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=36343b2492c84066a2d9eebc371b9381 "HTTP/1.1 202 Accepted"
+2026-03-03 21:26:31,315 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=36343b2492c84066a2d9eebc371b9381 "HTTP/1.1 202 Accepted"
+2026-03-03 21:26:32,394 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 21:26:33,346 - INFO - AI response: Unfortunately, the API request failed. However, based on general knowledge, a large egg typically co...
+2026-03-03 21:28:03,107 - INFO - User asked (topic=03_march): calories in egg ?
+2026-03-03 21:28:05,074 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 21:28:06,264 - INFO - HTTP Request: GET http://localhost:8000/sse "HTTP/1.1 200 OK"
+2026-03-03 21:28:06,550 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=856b0545b3e4485c866c6d362371503d "HTTP/1.1 202 Accepted"
+2026-03-03 21:28:06,579 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=856b0545b3e4485c866c6d362371503d "HTTP/1.1 202 Accepted"
+2026-03-03 21:28:06,591 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=856b0545b3e4485c866c6d362371503d "HTTP/1.1 202 Accepted"
+2026-03-03 21:28:18,822 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=856b0545b3e4485c866c6d362371503d "HTTP/1.1 202 Accepted"
+2026-03-03 21:28:19,908 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 21:28:20,763 - INFO - AI response: Unfortunately, the API request failed. However, based on general knowledge, a large egg typically co...
+2026-03-03 21:32:13,232 - INFO - User asked (topic=03_march): calories in egg ?
+2026-03-03 21:32:15,300 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 21:32:16,484 - INFO - HTTP Request: GET http://localhost:8000/sse "HTTP/1.1 200 OK"
+2026-03-03 21:32:16,758 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=efb7d9c970a943f08ba91347c0fcdd9e "HTTP/1.1 202 Accepted"
+2026-03-03 21:32:16,772 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=efb7d9c970a943f08ba91347c0fcdd9e "HTTP/1.1 202 Accepted"
+2026-03-03 21:32:16,783 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=efb7d9c970a943f08ba91347c0fcdd9e "HTTP/1.1 202 Accepted"
+2026-03-03 21:32:28,467 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=efb7d9c970a943f08ba91347c0fcdd9e "HTTP/1.1 202 Accepted"
+2026-03-03 21:32:29,554 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 21:32:30,311 - INFO - AI response: Unfortunately, the API request failed. However, based on general knowledge, a large egg typically co...
+2026-03-03 21:42:08,044 - INFO - User asked (topic=03_march): calories in egg ?
+2026-03-03 21:42:17,978 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 21:42:18,751 - INFO - HTTP Request: GET http://localhost:8000/sse "HTTP/1.1 200 OK"
+2026-03-03 21:42:19,058 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=99d2887a489c45d4ba2fc5d0cc618493 "HTTP/1.1 202 Accepted"
+2026-03-03 21:42:19,084 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=99d2887a489c45d4ba2fc5d0cc618493 "HTTP/1.1 202 Accepted"
+2026-03-03 21:42:19,104 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=99d2887a489c45d4ba2fc5d0cc618493 "HTTP/1.1 202 Accepted"
+2026-03-03 21:42:53,516 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=99d2887a489c45d4ba2fc5d0cc618493 "HTTP/1.1 202 Accepted"
+2026-03-03 21:42:54,975 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-03 21:42:55,779 - INFO - AI response: Based on the tool call response, the number of calories in an egg is approximately 70-80 kcal....
+2026-03-06 15:24:29,072 - INFO - User asked (topic=6_march): How to reduce belly fat?
+2026-03-06 15:24:42,300 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 15:24:43,552 - INFO - HTTP Request: GET http://localhost:8000/sse "HTTP/1.1 200 OK"
+2026-03-06 15:24:43,849 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=36cc43df52a54f058937da6f671c1443 "HTTP/1.1 202 Accepted"
+2026-03-06 15:24:43,875 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=36cc43df52a54f058937da6f671c1443 "HTTP/1.1 202 Accepted"
+2026-03-06 15:24:43,887 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=36cc43df52a54f058937da6f671c1443 "HTTP/1.1 202 Accepted"
+2026-03-06 15:25:03,054 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=36cc43df52a54f058937da6f671c1443 "HTTP/1.1 202 Accepted"
+2026-03-06 15:25:04,533 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 15:25:11,931 - INFO - AI response: Based on the tool call response, it seems that salmon is a good source of protein and healthy fats, ...
+2026-03-06 15:46:23,314 - INFO - User asked (topic=Belly_Fat): How can i reduce belly noticeably fat in 1 month ?
+2026-03-06 15:46:36,793 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 15:46:38,120 - INFO - HTTP Request: GET http://localhost:8000/sse "HTTP/1.1 200 OK"
+2026-03-06 15:46:38,419 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=5f359336f2d447f78fb2c9e28d16b362 "HTTP/1.1 202 Accepted"
+2026-03-06 15:46:38,452 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=5f359336f2d447f78fb2c9e28d16b362 "HTTP/1.1 202 Accepted"
+2026-03-06 15:46:38,466 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=5f359336f2d447f78fb2c9e28d16b362 "HTTP/1.1 202 Accepted"
+2026-03-06 15:47:08,547 - INFO - HTTP Request: POST http://localhost:8000/messages/?session_id=5f359336f2d447f78fb2c9e28d16b362 "HTTP/1.1 202 Accepted"
+2026-03-06 15:47:10,055 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 15:47:23,251 - INFO - AI response: Reducing belly fat in just one month requires a combination of healthy eating habits and regular phy...
+2026-03-06 16:06:01,763 - INFO - User asked (topic=workout_info): Hi my weight is 78 and height is 5 feet 6 inch and age is 42, how can i reduce belly fat and gain some muscles?
+2026-03-06 16:06:15,892 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 16:06:16,412 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 16:06:35,465 - INFO - AI response: Based on your height and weight, your BMI is 25.5, which falls into the overweight category. To redu...
+2026-03-06 16:08:30,145 - INFO - User asked (topic=workout_info): What is my height and weight etc?
+2026-03-06 16:08:33,191 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 16:08:33,717 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2026-03-06 16:08:34,325 - INFO - AI response: Your height is 5 feet 6 inches, and your weight is 78 pounds....
