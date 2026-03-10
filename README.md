@@ -44,3 +44,77 @@ OpenFoodFacts API
 https://ollama.ai
 
 Pull model:
+ollama pull llama3.1:8b
+
+
+---
+
+### 2 Clone Repository
+git clone https://github.com/yourusername/ai-fitness-coach-mcp.git
+
+cd ai-fitness-coach-mcp
+
+
+---
+
+### 3 Create Virtual Environment
+python -m venv .venv
+
+Activate:
+Windows
+.venv\Scripts\activate
+
+---
+
+### 4 Install Dependencies
+pip install -r requirements.txt
+
+
+---
+
+### 5 Start MCP Server
+python mcp_server.py
+
+---
+
+### 6 Run App
+streamlit run updated_main.py
+
+
+
+---
+
+## Example Questions
+
+• "How can I reduce belly fat?"  
+• "Nutrition of 2 eggs?"  
+• "Healthy breakfast ideas?"
+
+---
+
+## Learning Goals
+
+This project demonstrates:
+
+• AI agents with LangGraph  
+• Tool calling with MCP  
+• Local LLM applications  
+• Persistent memory systems  
+
+---
+
+## Future Improvements
+
+• Vector database memory  
+• Automatic body stat extraction  
+• Workout plan generation  
+• Meal planning system  
+• Voice assistant support  
+
+---
+
+## Author
+
+Built by Vivek Tyagi
+
+
