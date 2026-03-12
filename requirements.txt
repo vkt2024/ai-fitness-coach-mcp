@@ -1,5 +1,10 @@
 streamlit
-langchain-community
-langchain-classic
+langchain
 langchain-core
+langchain-community
+langchain-ollama
+langgraph
 ollama
+requests
+fastapi
+uvicorn
