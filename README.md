@@ -40,6 +40,9 @@ OpenFoodFacts API
 ## Installation
 
 ### 1 Install Ollama
+Install Ollama and pull the model first:
+
+ollama pull llama3.1:8b
 
 https://ollama.ai
 
