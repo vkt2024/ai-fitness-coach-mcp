@@ -1,8 +1,11 @@
 import streamlit as st
 import os
 from new_backend import init_conversation, save_conversation, list_topics, load_conversation
-from frontend import setup_ui
+from frontend import setup_ui, render_chat
 import logging
+
+
+setup_ui()
 
 
 # Configure logging
@@ -15,7 +18,6 @@ logging.basicConfig(
     ]
 )
 
-setup_ui()
 
 # ---------------- SESSION INIT ---------------- #
 
@@ -69,7 +71,7 @@ option = st.selectbox("Choose an option", ["Ask Fitness Question", "Check your B
 
 
 # ===================================================
-#  FITNESS CHAT (NOW MCP ENABLED)
+#  FITNESS CHAT (MCP ENABLED)
 # ===================================================
 
 if option == "Ask Fitness Question":
@@ -91,7 +93,7 @@ if option == "Ask Fitness Question":
             logging.info(f"User asked (topic={topic}): {user_text.strip()}")
 
             try:
-                # 🔥 THIS IS THE MCP-READY CHANGE
+
                 result = st.session_state.conversation.invoke(
                     {"messages": [{"role": "user", "content": user_text.strip()}]}
                 )
@@ -100,11 +102,9 @@ if option == "Ask Fitness Question":
 
                 logging.info(f"AI response: {response[:100]}...")
 
-                # Save to session history
+                # Save chat history
                 st.session_state.chat_history.append(("human", user_text.strip()))
                 st.session_state.chat_history.append(("ai", response))
-
-                st.markdown(f"**🤖 Coach:** {response}")
 
                 # Save to file
                 save_conversation(st.session_state.chat_history, topic)
@@ -114,22 +114,15 @@ if option == "Ask Fitness Question":
                 logging.error(traceback.format_exc())
                 st.error(f"Error: {str(e)}")
 
-        # Show Chat History
+        # ---------------- SHOW CHAT ---------------- #
+
         if st.session_state.chat_history:
 
-            st.subheader(f"💬 Conversation History ({topic})")
+            st.subheader(f"💬 Conversation ({topic})")
 
-            for item in st.session_state.chat_history:
+            # 🔥 USE CUSTOM CHAT BUBBLES
+            render_chat(st.session_state.chat_history)
 
-                if isinstance(item, tuple) and len(item) == 2:
-                    role, message = item
-                else:
-                    continue
-
-                if role == "human":
-                    st.markdown(f"**👤 You:** {message}")
-                else:
-                    st.markdown(f"**🤖 Coach:** {message}")
         # Reset
         if st.button("🔄 Reset Chat"):
             st.session_state.chat_history = []
@@ -144,7 +137,7 @@ if option == "Ask Fitness Question":
 
 
 # ===================================================
-#  BMI (NO CHANGE)
+#  BMI
 # ===================================================
 
 elif option == "Check your BMI":
