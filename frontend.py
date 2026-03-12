@@ -59,7 +59,7 @@ def setup_ui():
         word-wrap: break-word;
     }
     .chat-bubble.user {
-        align-self: flex-start;
+        align-self: flex-end;
         background-color: #DCF8C6; /* WhatsApp green */
         color: #000;
     }
@@ -74,3 +74,30 @@ def setup_ui():
     st.markdown("<div class='emoji-hero'>🏋️</div>", unsafe_allow_html=True)
     st.title("Fitness AI Assistant")
     st.markdown("“The worst thing I can be is the same as everybody else. I hate that.” — Arnold Schwarzenegger")
+
+
+def render_chat(chat_history):
+
+    st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
+
+    for msg in chat_history:
+
+        role = msg[0]
+        message = msg[1]
+
+        if role == "human":
+            bubble = f"""
+            <div class="chat-bubble user">
+            👤 {message}
+            </div>
+            """
+        else:
+            bubble = f"""
+            <div class="chat-bubble ai">
+            🤖 {message}
+            </div>
+            """
+
+        st.markdown(bubble, unsafe_allow_html=True)
+
+    st.markdown("</div>", unsafe_allow_html=True)
