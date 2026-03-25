@@ -1,3 +1,9 @@
+## License
+
+This project is licensed under the MIT License.  
+If you use this project, please give proper credit.
+
+
 # AI Fitness Coach (Local LLM + MCP Tools)
 
 An AI-powered fitness assistant built with **LangGraph**, **Ollama**, and **MCP tools**.
