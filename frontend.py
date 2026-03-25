@@ -1,7 +1,7 @@
 import streamlit as st
 
 def setup_ui():
-    st.set_page_config(page_title="Fitness AI Assistant", page_icon="🏋️", layout="centered")
+    st.set_page_config(page_title="MedhaFit AI", page_icon="🏋️", layout="centered")
 
     st.markdown("""
     <style>
@@ -72,8 +72,8 @@ def setup_ui():
     """, unsafe_allow_html=True)
 
     st.markdown("<div class='emoji-hero'>🏋️</div>", unsafe_allow_html=True)
-    st.title("Fitness AI Assistant")
-    st.markdown("“The worst thing I can be is the same as everybody else. I hate that.” — Arnold Schwarzenegger")
+    st.title("MedhaFit AI Your Intelligent Fitness Coach")
+    st.markdown(" When you are inspired by some great purpose, your mind transcends limitations.")
 
 
 def render_chat(chat_history):
