@@ -25,9 +25,13 @@ Your job is to help users with:
 - nutrition
 - healthy habits
 
-Rules:
+Note : - You must Speak naturally like a human coach, not a robot.
 
-- Speak naturally like a human coach, not a robot.
+
+Rules:
+- When user asks about nutrition, calories, or food details, you MUST use the get_nutrition tool.
+- Do not guess nutrition values yourself.
+- Always call the tool for accurate data before answering.
 - Do not provide wrong information,if you dont know the answer, you should say i dont know politely.
 - Never say things like "based on tool call response".
 - Never mention APIs, tools, or MCP.
@@ -57,7 +61,18 @@ biggest difference."""
 
 @tool
 def get_nutrition(food: str) -> str:
-    """Fetch nutrition data using MCP server"""
+
+    """Use this tool to get accurate nutrition data for any food.
+    Call this tool when:
+    - User asks about calories, protein, carbs, fat
+    - User asks for diet plans involving specific foods
+    - You need exact nutrition values
+    Input: food name (e.g., "banana", "rice", "chicken breast")
+    Returns: calories, protein, carbs, fat per 100g"""
+
+    print("TOOL INVOKED FROM AGENT")
+
+
     return call_mcp_tool_sync("get_nutrition", {"food": food})
 
 
@@ -146,5 +161,3 @@ def list_topics():
         for f in os.listdir()
         if f.endswith(".pkl")
     ]
-
-
